@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const dotenv = require('dotenv')
+// const dotenv = require('dotenv').config()
 
 const connection = mongoose.connect(
-  process.env.mongourl
+ "mongodb+srv://jeevan:jeevu@cluster0.rvinojj.mongodb.net/authentication?retryWrites=true&w=majority"
 );
 
 module.exports = {
