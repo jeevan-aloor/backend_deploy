@@ -14,15 +14,17 @@ app.use(cors({
 app.use(express.json());
 
 
+app.get("/",(req,res)=>{
+  res.send("home")
+})
 
 app.use("/user", userRouter);
 app.use(varify);
 
 app.use("/note", noteRouter);
 
-app.get("/",(req,res)=>{
-  res.send("home")
-})
+
+
 
 app.listen(8000, async () => {
   try {
